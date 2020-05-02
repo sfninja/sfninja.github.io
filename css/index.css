@@ -106,13 +106,27 @@ a.tgme_head_dl_button:active {
   text-decoration: none;
 }
 
+span.line {
+  display: inline-block;
+}
+.tgme_social_button {
+    height: 48px;
+    width: 48px;
+    margin: 3px;
+}
+
+.social_icons {
+    margin: 40px auto;
+    text-align: center;
+}
+
 .tgme_page {
   position: relative;
   margin: 52px auto 50px;
   max-width: 424px;
 }
 .tgme_page_post {
-  max-width: 455px;
+  max-width: 460px;
   padding: 52px 0 50px;
   margin: 0 auto;
 }
@@ -133,26 +147,17 @@ a.tgme_head_dl_button:active {
   text-align: center;
   max-width: 340px;
   padding: 0 10px;
-  margin: 0 auto;
+  margin: 10px auto;
   color: #333;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .tgme_page_description {
   font-size: 16px;
   line-height: 25px;
   text-align: center;
-  max-width: 340px;
   padding: 0 10px;
   margin: 0 auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-height: 125px;
   word-break: break-word;
 }
 .tgme_page_action {
@@ -187,22 +192,6 @@ a.tgme_action_button_new {
 a.tgme_action_button_new:hover,
 a.tgme_action_button_new:active {
   background: #28c979;
-}
-
-.tgme_page_web_action {
-  margin-top: 18px;
-}
-.tgme_page_web_action a.tgme_action_button {
-  color: #5dc390;;
-  background: #fff;
-  border: 2px solid #5dc390;
-  padding: 13px 25px 11px;
-}
-.tgme_page_web_action a.tgme_action_button:hover,
-.tgme_page_web_action a.tgme_action_button:active {
-  color: #5dc390;;
-  background: #FFF;;
-  text-decoration: none;
 }
 
 /* Mobile */
