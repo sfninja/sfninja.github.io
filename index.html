@@ -42,6 +42,32 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
     <link href="./css/index.css?190" rel="stylesheet" media="screen">
+
+    <!-- Global site tag (gtag.js) - Google Ads: 976847779 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976847779"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-976847779');
+    </script>
+    <!-- Event snippet for Website lead conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-976847779/98DvCL7Lls8BEKOH5tED',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
 </head>
 <body>
     <div class="tgme_page_wrap">
@@ -54,7 +80,7 @@
         </div>
         <div class="tgme_page tgme_page_post">
             <div class="tgme_page_photo">
-                <a href="tg://resolve?domain=sfninja"><img class="tgme_page_photo_image" src="./images/logo.jpg" alt="Channel logo"></a>
+                <a onclick="return gtag_report_conversion('tg://resolve?domain=sfninja');"><img class="tgme_page_photo_image" src="./images/logo.jpg" alt="Channel logo"></a>
             </div>
             <div class="tgme_page_title" dir="auto">
                 <span dir="auto">Для тех, кто в tech</span>
@@ -62,13 +88,9 @@
             <div class="tgme_page_description" dir="auto">Прошел в Google от стажера до настоящего инженера. Сегодня определяю будущее платформы в&nbsp;Netflix.<br/>Свежие истории, слухи и опыт из Кремниевой&nbsp;долины.</div>
             <main id="main">
                 <div class="tgme_page_action">
-                    <a class="tgme_action_button_new" href="tg://resolve?domain=sfninja">Подписаться в Telegram</a>
+                    <a onclick="return gtag_report_conversion('tg://resolve?domain=sfninja');" class="tgme_action_button_new">Подписаться в Telegram</a>
                 </div>
             </main>
-            <div class="social_icons">
-                <a href="https://twitter.com/ak_239"><img class="tgme_social_button" src="./images/twitter.png" alt="Мой Twitter"></a>
-                <a href="https://www.youtube.com/watch?v=o0IGGaly338"><img class="tgme_social_button" src="./images/youtube.png" alt="Одно из интервью на Youtube"></a>
-            </div>
         </div>
     </div>
 </body>
