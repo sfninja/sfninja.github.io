@@ -43,30 +43,12 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
     <link href="./css/index.css?190" rel="stylesheet" media="screen">
 
-    <!-- Global site tag (gtag.js) - Google Ads: 642322444 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-642322444"></script>
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-486799-e0OWi"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-486799-e0OWi" style="position:fixed; left:-999px;" alt=""/></noscript>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-642322444');
-    </script>
-    <!-- Event snippet for Website lead conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-642322444/U9E8CNzo-c4BEIygpLIC',
-          'event_callback': callback
-      });
-      return false;
-    }
+      function conversion(value) {
+        VK.Goal('conversion', { value: value });
+        return true;
+      }
     </script>
 </head>
 <body>
@@ -85,11 +67,11 @@
             <div class="tgme_page_title" dir="auto">
                 <span dir="auto">Для тех, кто в tech</span>
             </div>
-            <div class="tgme_page_description" dir="auto">Привет!<br/>Прошел в Google от стажера до настоящего инженера. Сегодня определяю будущее платформы в&nbsp;Netflix.<br/>Свежие истории, слухи и опыт из Кремниевой&nbsp;долины.</div>
+            <div class="tgme_page_description" dir="auto">Прошел в Google от стажера до настоящего инженера. Сегодня определяю будущее платформы в&nbsp;Netflix.<br/>Свежие истории, слухи и опыт из Кремниевой&nbsp;долины.</div>
             <main id="main">
                 <div class="tgme_page_action">
-                    <p class="tgme_page_description">Подпишись на мой канал - @sfninja:</p>
-                    <a onclick="return gtag_report_conversion('tg://resolve?domain=sfninja');" class="tgme_action_button_new">Подписаться в Telegram</a>
+                    <p class="tgme_page_description">Подпишись на мой канал - <a onclick="return conversion('web');" href="https://web.telegram.org/#/im?p=@sfninja">@sfninja</a>:</p>
+                    <a onclick="return conversion('app');" href="tg://resolve?domain=sfninja" class="tgme_action_button_new">Подписаться в Telegram</a>
                 </div>
             </main>
         </div>
