@@ -53,6 +53,13 @@
         VK.Goal('conversion', VALUE_TO_ID[value]);
         return true;
       }
+      function openApp() {
+        conversion('app');
+        window.location.replace('tg://resolve?domain=sfninja');
+        setTimeout(function() {
+          window.location.replace('https://web.telegram.org/#/im?p=@sfninja');
+        }, 2000);
+      }
     </script>
 </head>
 <body>
@@ -71,11 +78,10 @@
             <div class="tgme_page_title" dir="auto">
                 <span dir="auto">Для тех, кто в tech</span>
             </div>
-            <div class="tgme_page_description" dir="auto">Прошел в Google от стажера до настоящего инженера. Сегодня определяю будущее платформы в&nbsp;Netflix.<br/>Свежие истории, слухи и опыт из Кремниевой&nbsp;долины.</div>
+            <div class="tgme_page_description" dir="auto">Телеграм канал о жизни в Кремниевой долине глазами инженера работавшего в&nbsp;Google&nbsp;и&nbsp;Netflix.</div>
             <main id="main">
                 <div class="tgme_page_action">
-                    <p class="tgme_page_description">Подпишись на мой канал - <a onclick="return conversion('web');" href="https://web.telegram.org/#/im?p=@sfninja">@sfninja</a>:</p>
-                    <p><a onclick="return conversion('app');" href="tg://resolve?domain=sfninja" class="tgme_action_button_new">Подписаться в Telegram</a></p>
+                    <a onclick="return openApp();" href="#" class="tgme_action_button_new">Подписаться в Telegram</a>
                 </div>
             </main>
         </div>
