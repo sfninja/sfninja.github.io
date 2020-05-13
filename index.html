@@ -47,7 +47,8 @@
     <script>
       const VALUE_TO_ID = {
         web: 1,
-        app: 2
+        app: 2,
+        forceOpen: 3
       };
       function conversion(value) {
         VK.Goal('conversion', VALUE_TO_ID[value]);
@@ -60,9 +61,36 @@
           window.location.replace('https://web.telegram.org/#/im?p=@sfninja');
         }, 2000);
       }
+
+      /**
+       * Determine the mobile operating system.
+       * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+       *
+       * @returns {String}
+       */
+      function getMobileOperatingSystem() {
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+          // Windows Phone must come first because its UA also contains "Android"
+          if (/windows phone/i.test(userAgent))
+              return "Windows Phone";
+          if (/android/i.test(userAgent))
+              return "Android";
+          // iOS detection from: http://stackoverflow.com/a/9039885/177710
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
+              return "iOS";
+          return null;
+      }
+
+      function tryToOpenInTelegram() {
+        var os = getMobileOperatingSystem();
+        if (os) {
+          conversion('forceOpen');
+          window.location.replace('tg://resolve?domain=sfninja');
+        }
+      }
     </script>
 </head>
-<body>
+<body onload="tryToOpenInTelegram()">
     <div class="tgme_page_wrap">
         <div class="tgme_head_wrap">
             <div class="tgme_head">
